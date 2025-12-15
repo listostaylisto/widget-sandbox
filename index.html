@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Widget Sandbox</title>
+  <title>Kumar Sandbox</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -13,35 +13,35 @@
     <div class="topbar">
       <div class="brand">
         <span class="dot"></span>
-        <span>Widget Sandbox</span>
+        <span>Sandbox</span>
       </div>
-      <span class="badge">Sandbox mode</span>
+      <span class="badge">Preview mode</span>
     </div>
 
     <!-- Hero -->
     <div class="hero">
       <h1>Welcome to Kumar's sandbox environment</h1>
       <p>
-        This is a safe preview space to test page layout and embedded widgets before anything goes live.
-        The widget itself is live, but this page is just the wrapper around it.
+        This is a private preview space used to test layout, flow, and third-party widgets
+        before anything goes live. The widget itself is live, but this page is only a wrapper.
       </p>
 
-      <!-- OPTION 2: Status strip -->
       <hr class="sep" />
+
       <p>
-        Status: Online • Hosted on GitHub Pages • Widget source: Purplepass
+        Status: Online • Hosted on GitHub Pages • External services load live data
       </p>
     </div>
 
     <!-- Content grid -->
     <div class="grid">
 
-      <!-- Purplepass card -->
+      <!-- Purplepass -->
       <div class="card">
         <h2>Purplepass Event Widget</h2>
         <p>
-          Opens the live Purplepass widget inside this sandbox layout so we can test flow,
-          spacing, and responsiveness.
+          Opens the live Purplepass widget inside this sandbox layout so we can test spacing,
+          responsiveness, and user flow.
         </p>
 
         <div class="actions">
@@ -54,20 +54,65 @@
         </div>
 
         <small>
-          Reminder: Use the $0 test ticket only. Do not enter real payment information.
+          Reminder: Use test tickets only. Do not enter real payment information.
         </small>
       </div>
 
-      <!-- Notes card -->
+      <!-- Music -->
       <div class="card">
-        <h2>Notes</h2>
+        <h2>Music</h2>
         <p>
-          Any changes made in Purplepass automatically update here since the widget
-          is tied to the event ID.
+          Reference track for vibe and branding. Opens directly on YouTube.
         </p>
 
         <div class="actions">
-          <a class="btn" href="https://github.com/listostaylisto/widget-sandbox" target="_blank" rel="noreferrer">
+          <a class="btn primary"
+             href="https://www.youtube.com/watch?v=OBVx0Jmg88g"
+             target="_blank"
+             rel="noreferrer">
+            Play on YouTube
+          </a>
+        </div>
+
+        <small>
+          Note: This video does not allow embedded playback.
+        </small>
+      </div>
+
+      <!-- Instagram -->
+      <div class="card">
+        <h2>Instagram</h2>
+        <p>
+          Content reference and updates. Opens in a new tab.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary"
+             href="https://www.instagram.com/listoonthebeat/"
+             target="_blank"
+             rel="noreferrer">
+            Open Instagram
+          </a>
+        </div>
+
+        <small>
+          Note: Instagram blocks most embedded views, so we link out for reliability.
+        </small>
+      </div>
+
+      <!-- Notes -->
+      <div class="card">
+        <h2>Notes</h2>
+        <p>
+          Any changes made in Purplepass automatically reflect here since the widget
+          pulls live event data.
+        </p>
+
+        <div class="actions">
+          <a class="btn"
+             href="https://github.com/listostaylisto/widget-sandbox"
+             target="_blank"
+             rel="noreferrer">
             View GitHub Repository
           </a>
         </div>
@@ -77,10 +122,9 @@
 
     <!-- Footer -->
     <div class="footer">
-      Hosted on GitHub Pages. The widget loads directly from Purplepass.
+      Hosted on GitHub Pages • Sandbox wrapper only • External services remain live
     </div>
 
   </div>
 </body>
 </html>
-
