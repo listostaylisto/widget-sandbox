@@ -1,18 +1,123 @@
-<script id="purplepass">
-  Purplepass = {
-    eventId: "342786",
-    widgetType: "event",
-    eventBlocks: ["hero","pricing","overview-details","overview-description","images","video","map"],
-    uxMode: "panels",
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Purplepass Widget Preview</title>
 
-    /* Force it to render inside this div */
-    containerId: "purplepass-widget",
+  <!-- Shared theme (widgets/ is one level deeper) -->
+  <link rel="stylesheet" href="../styles.css" />
 
-    containerStyles: {
-      "maxWidth": "850px",
-      "border": "1px solid #D7DBEB",
-      "background": "transparent"
+  <!-- Page-specific polish -->
+  <style>
+    /* A “stage” around the widget so the white widget doesn’t feel random */
+    .widget-stage {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 106, 0, 0.35);
+      background:
+        radial-gradient(650px 220px at 20% 0%, rgba(255,106,0,0.18), transparent 65%),
+        rgba(255,255,255,0.03);
+      box-shadow:
+        0 18px 40px rgba(0,0,0,0.55),
+        0 0 22px rgba(255,106,0,0.18);
     }
-  };
-</script>
-<script src="https://www.purplepass.com/assets/widget/widget-full.js"></script>
+
+    /* Keep the widget centered and prevent it from touching edges */
+    #purplepass-widget {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* If the widget uses iframes, soften corners */
+    iframe {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Sandbox</span>
+      </div>
+      <span class="badge">Purplepass preview</span>
+    </div>
+
+    <div class="hero">
+      <h1>Purplepass Widget Test</h1>
+      <p>
+        Same sandbox theme, with a styled stage around the widget so it blends with the black HEMI layout.
+      </p>
+
+      <hr class="sep" />
+
+      <p>
+        Reminder: Use test tickets only. Do not enter real payment information.
+      </p>
+
+      <div class="actions" style="margin-top:16px;">
+        <a class="btn" href="../index.html">Back to Home</a>
+        <a class="btn" href="https://www.purplepass.com/" target="_blank" rel="noreferrer">Open Purplepass</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Event Widget</h2>
+      <p style="margin-bottom: 10px;">
+        The widget loads live from Purplepass. Styling outside the widget is our sandbox wrapper.
+      </p>
+
+      <!-- Themed stage around the widget -->
+      <div class="widget-stage">
+        <div id="purplepass-widget"></div>
+
+        <!-- Purplepass Widget Config -->
+        <script id="purplepass">
+          Purplepass = {
+            eventId: "342786",
+            widgetType: "event",
+            uxMode: "panels",
+            containerId: "purplepass-widget",
+            eventBlocks: [
+              "hero",
+              "pricing",
+              "overview-details",
+              "overview-description",
+              "images",
+              "video",
+              "map"
+            ],
+            containerStyles: {
+              "maxWidth": "850px",
+              "border": "1px solid #D7DBEB",
+              "background": "transparent"
+            }
+          };
+        </script>
+
+        <!-- Purplepass Widget Loader -->
+        <script src="https://www.purplepass.com/assets/widget/widget-full.js?v=7"></script>
+      </div>
+
+      <small style="margin-top:16px;">
+        Note: Internal widget styling is controlled by Purplepass.
+        This sandbox styles only the surrounding layout.
+      </small>
+    </div>
+
+    <div class="footer">
+      Hosted on GitHub Pages • Widget loads live from Purplepass
+    </div>
+
+  </div>
+
+  <!-- Load theme + accessibility JS so page doesn’t go white -->
+  <script src="../script.js?v=5"></script>
+</body>
+</html>
