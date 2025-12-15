@@ -1,232 +1,130 @@
-:root {
-  /* Dominant blacks */
-  --bg: #070707;
-  --panel: rgba(255,255,255,0.06);
-  --panel2: rgba(255,255,255,0.035);
-  --border: rgba(255,255,255,0.12);
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Widget Sandbox</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
 
-  /* Text */
-  --text: rgba(255,255,255,0.92);
-  --muted: rgba(255,255,255,0.65);
+    <!-- Top bar -->
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Widget Sandbox</span>
+      </div>
+      <span class="badge">Sandbox mode</span>
+    </div>
 
-  /* HEMI ORANGE */
-  --accent: #FF6A00;
-  --accent2: #FF8A2A;
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Welcome to Kumar's sandbox environment</h1>
+      <p>
+        This is a safe preview space to test page layout and embedded widgets before anything goes live.
+        The widget itself is live, but this page is just the wrapper around it.
+      </p>
 
-  /* Shadows */
-  --shadow: rgba(0,0,0,0.55);
-}
+      <hr class="sep" />
+      <p>
+        Status: Online • Hosted on GitHub Pages • Widget source: Purplepass
+      </p>
+    </div>
 
-* {
-  box-sizing: border-box;
-}
+    <!-- Content grid -->
+    <div class="grid">
 
-body {
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:
-    radial-gradient(900px 600px at 15% 8%, rgba(255,106,0,0.22), transparent 60%),
-    radial-gradient(800px 500px at 90% 25%, rgba(255,138,42,0.12), transparent 55%),
-    radial-gradient(900px 700px at 50% 115%, rgba(255,106,0,0.10), transparent 55%),
-    var(--bg);
-  color: var(--text);
-}
+      <!-- Purplepass card -->
+      <div class="card">
+        <h2>Purplepass Event Widget</h2>
+        <p>
+          Opens the live Purplepass widget inside this sandbox layout so we can test flow,
+          spacing, and responsiveness.
+        </p>
 
-.wrap {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 42px 18px 70px;
-}
+        <div class="actions">
+          <a class="btn primary" href="./widgets/purplepass.html">
+            Open Purplepass Preview
+          </a>
+          <a class="btn" href="./widgets/purplepass.html" target="_blank" rel="noreferrer">
+            Open in new tab
+          </a>
+        </div>
 
-/* Top bar */
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 18px;
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
-  border-radius: 18px;
-  box-shadow: 0 14px 32px var(--shadow);
-}
+        <small>
+          Reminder: Use the $0 test ticket only. Do not enter real payment information.
+        </small>
+      </div>
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 900;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-}
+      <!-- Music card (YouTube embed) -->
+      <div class="card">
+        <h2>Music</h2>
+        <p>
+          Background track for the vibe. You can hit play here while reviewing widgets.
+        </p>
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow:
-    0 0 0 4px rgba(255,106,0,0.18),
-    0 0 24px rgba(255,106,0,0.35);
-}
+        <hr class="sep" />
 
-.badge {
-  font-size: 12px;
-  color: var(--muted);
-  border: 1px solid rgba(255,106,0,0.45);
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(255,106,0,0.10);
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-}
+        <div style="position:relative; padding-top:56.25%; border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,0.12);">
+          <iframe
+            src="https://www.youtube.com/embed/OBVx0Jmg88g"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="position:absolute; inset:0; width:100%; height:100%;">
+          </iframe>
+        </div>
 
-/* Hero */
-.hero {
-  margin-top: 18px;
-  padding: 28px 18px;
-}
+        <small>
+          Tip: If autoplay is blocked, just hit play once and it’ll work normally.
+        </small>
+      </div>
 
-h1 {
-  margin: 0 0 10px;
-  font-size: 38px;
-  line-height: 1.05;
-  letter-spacing: -0.4px;
-}
+      <!-- Instagram card -->
+      <div class="card">
+        <h2>Instagram</h2>
+        <p>
+          Quick link to the profile for content references and updates.
+        </p>
 
-.hero p {
-  margin: 0;
-  color: var(--muted);
-  max-width: 70ch;
-  line-height: 1.55;
-}
+        <div class="actions">
+          <a class="btn primary" href="https://www.instagram.com/listoonthebeat/" target="_blank" rel="noreferrer">
+            Open Instagram
+          </a>
+          <a class="btn" href="https://www.instagram.com/listoonthebeat/" target="_blank" rel="noreferrer">
+            View in new tab
+          </a>
+        </div>
 
-/* Separator */
-hr.sep {
-  border: 0;
-  height: 1px;
-  margin: 18px 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,106,0,0.55),
-    transparent
-  );
-}
+        <small>
+          Note: Instagram embeds are sometimes restricted. Linking is the most reliable option.
+        </small>
+      </div>
 
-/* Grid */
-.grid {
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 14px;
-}
+      <!-- Notes card -->
+      <div class="card">
+        <h2>Notes</h2>
+        <p>
+          Any changes made in Purplepass automatically update here since the widget
+          is tied to the event ID.
+        </p>
 
-/* Cards */
-.card {
-  grid-column: span 12;
-  padding: 18px;
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, var(--panel), var(--panel2));
-  border-radius: 18px;
-  box-shadow: 0 16px 36px var(--shadow);
-  position: relative;
-  overflow: hidden;
-}
+        <div class="actions">
+          <a class="btn" href="https://github.com/listostaylisto/widget-sandbox" target="_blank" rel="noreferrer">
+            View GitHub Repository
+          </a>
+        </div>
+      </div>
 
-.card::before {
-  content: "";
-  position: absolute;
-  top: -80px;
-  right: -80px;
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle, rgba(255,106,0,0.28), transparent 65%);
-  pointer-events: none;
-}
+    </div>
 
-.card h2 {
-  margin: 0 0 8px;
-  font-size: 16px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-}
+    <!-- Footer -->
+    <div class="footer">
+      Hosted on GitHub Pages. The widget loads directly from Purplepass.
+    </div>
 
-.card p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.card small {
-  display: block;
-  margin-top: 10px;
-  color: rgba(255,255,255,0.55);
-}
-
-/* Actions */
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 11px 16px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.04);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.45px;
-  transition:
-    transform 0.12s ease,
-    border-color 0.12s ease,
-    background 0.12s ease,
-    box-shadow 0.12s ease;
-}
-
-.btn:hover {
-  border-color: rgba(255,106,0,0.65);
-  background: rgba(255,106,0,0.10);
-  box-shadow: 0 0 18px rgba(255,106,0,0.35);
-  transform: translateY(-1px);
-}
-
-.btn.primary {
-  border: none;
-  color: #0b0b0b;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow:
-    0 10px 26px rgba(255,106,0,0.30),
-    inset 0 1px 0 rgba(255,255,255,0.25);
-}
-
-.btn.primary:hover {
-  background: linear-gradient(135deg, #FF7A1A, #FF9A3D);
-}
-
-/* Footer */
-.footer {
-  margin-top: 22px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.55);
-}
-
-a {
-  color: var(--text);
-}
-
-code {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 2px 6px;
-  border-radius: 8px;
-  color: var(--text);
-}
+  </div>
+</body>
+</html>
