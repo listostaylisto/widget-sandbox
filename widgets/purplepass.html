@@ -10,7 +10,6 @@
 
   <!-- Page-specific polish -->
   <style>
-    /* A “stage” around the widget so the white widget doesn’t feel random */
     .widget-stage {
       margin-top: 14px;
       padding: 16px;
@@ -24,14 +23,12 @@
         0 0 22px rgba(255,106,0,0.18);
     }
 
-    /* Keep the widget centered and prevent it from touching edges */
     #purplepass-widget {
       width: 100%;
       max-width: 900px;
       margin: 0 auto;
     }
 
-    /* If the widget uses iframes, soften corners */
     iframe {
       border-radius: 12px;
     }
@@ -73,14 +70,13 @@
         The widget loads live from Purplepass. Styling outside the widget is our sandbox wrapper.
       </p>
 
-      <!-- Themed stage around the widget -->
       <div class="widget-stage">
         <div id="purplepass-widget"></div>
 
-        <!-- Purplepass Widget Config -->
+        <!-- Purplepass Widget Config (UPDATED ONLY) -->
         <script id="purplepass">
           Purplepass = {
-            eventId: "342786",
+            eventId: "342887",
             widgetType: "event",
             uxMode: "panels",
             containerId: "purplepass-widget",
@@ -117,7 +113,6 @@
 
   </div>
 
-  <!-- Load theme + accessibility JS so page doesn’t go white -->
   <script src="../script.js?v=5"></script>
 </body>
 </html>
