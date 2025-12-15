@@ -8,16 +8,46 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>Widget Sandbox</h1>
-    <p>Select a widget page to preview:</p>
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Widget Sandbox</span>
+      </div>
+      <span class="badge">Preview only</span>
+    </div>
 
-    <ul>
-      <li><a href="./widgets/purplepass.html">Purplepass Widget</a></li>
-    </ul>
+    <div class="hero">
+      <h1>Internal preview hub</h1>
+      <p>
+        This page is just the wrapper around the embeds. It’s a safe place to preview layout and widget behavior before anything goes live.
+      </p>
+    </div>
 
-    <p>Server running on <code>http://localhost:5173</code></p>
+    <div class="grid">
+      <div class="card">
+        <h2>Purplepass Event Widget</h2>
+        <p>Opens the widget preview page hosted here on GitHub Pages.</p>
+        <div class="actions">
+          <a class="btn primary" href="./widgets/purplepass.html">Open Purplepass Preview</a>
+          <a class="btn" href="./widgets/purplepass.html" target="_blank" rel="noreferrer">Open in new tab</a>
+        </div>
+        <small>Reminder: Use the $0 test ticket only. Do not enter real payment info.</small>
+      </div>
+
+      <div class="card">
+        <h2>Notes</h2>
+        <p>
+          Updates made in Purplepass reflect automatically here because the widget points to the event ID.
+        </p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/listostaylisto/widget-sandbox" target="_blank" rel="noreferrer">View Repo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Hosted on GitHub Pages. The widget loads directly from Purplepass.
+    </div>
   </div>
-
-  <script src="./script.js"></script>
 </body>
 </html>
