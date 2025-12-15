@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Purplepass Widget – Assigned VIP Demo</title>
+
+  <!-- Shared sandbox styles -->
+  <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .widget-stage {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 106, 0, 0.35);
+      background:
+        radial-gradient(650px 220px at 20% 0%, rgba(255,106,0,0.18), transparent 65%),
+        rgba(255,255,255,0.03);
+      box-shadow:
+        0 18px 40px rgba(0,0,0,0.55),
+        0 0 22px rgba(255,106,0,0.18);
+    }
+
+    #purplepass-widget {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    iframe {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Sandbox</span>
+      </div>
+      <span class="badge">Assigned VIP demo</span>
+    </div>
+
+    <div class="hero">
+      <h1>Purplepass Demo – Assigned VIP</h1>
+      <p>
+        This page demonstrates how VIP tables behave when fully assigned seating is enabled.
+        Buyers can select individual seats at a table, which can be misleading when VIP is sold as a full table.
+      </p>
+
+      <hr class="sep" />
+
+      <div class="actions" style="margin-top:16px;">
+        <a class="btn" href="../index.html">Back to Home</a>
+        <a class="btn" href="./purplepass.html">View Current Setup</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Event Widget</h2>
+      <p style="margin-bottom:10px;">
+        Assigned seating demo for internal review only.
+      </p>
+
+      <div class="widget-stage">
+        <div id="purplepass-widget"></div>
+
+        <!-- Assigned VIP Purplepass widget -->
+        <script id="purplepass">
+          Purplepass = {
+            eventId: "342786",
+            widgetType: "event",
+            uxMode: "panels",
+            containerId: "purplepass-widget",
+            eventBlocks: [
+              "hero",
+              "pricing",
+              "overview-details",
+              "overview-description",
+              "images",
+              "video",
+              "map"
+            ],
+            containerStyles: {
+              "maxWidth": "850px",
+              "border": "1px solid #D7DBEB",
+              "background": "transparent"
+            }
+          };
+        </script>
+
+        <script src="https://www.purplepass.com/assets/widget/widget-full.js?v=13"></script>
+      </div>
+
+      <small style="margin-top:16px;">
+        This widget is for demonstration purposes only and is not intended for live sales.
+      </small>
+    </div>
+
+    <div class="footer">
+      Hosted on GitHub Pages • Sandbox demo only
+    </div>
+
+  </div>
+
+  <!-- Load sandbox JS (theme + accessibility) -->
+  <script src="../script.js?v=5"></script>
+</body>
+</html>
