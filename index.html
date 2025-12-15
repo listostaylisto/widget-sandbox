@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kumar Sandbox</title>
-  <link rel="stylesheet" href="./styles.css?v=4" />
+  <link rel="stylesheet" href="./styles.css?v=5" />
 </head>
 <body>
   <div class="wrap">
@@ -50,32 +50,66 @@
         </small>
       </div>
 
-      <!-- NEW: Live Ops section -->
+      <!-- NEW: Theme + Accessibility Controls -->
       <div class="card">
-        <h2>Live Ops</h2>
+        <h2>Theme and Accessibility</h2>
         <p>
-          Quick status utilities for the sandbox. Live clock and a mini calendar.
+          Runtime theming and accessibility controls using CSS variables. Settings save locally in your browser.
         </p>
 
         <hr class="sep" />
 
-        <div class="liveops">
-          <div class="liveops-box">
-            <div class="liveops-label">Local Time</div>
-            <div id="live-time" class="liveops-value">Loading…</div>
-            <div id="live-date" class="liveops-sub">Loading…</div>
+        <div class="panel-grid">
+
+          <!-- Theme Switcher -->
+          <div class="panel">
+            <div class="panel-title">Theme Switcher</div>
+            <div class="panel-sub">Swap visual themes without redeploying.</div>
+
+            <div class="actions" style="margin-top:12px;">
+              <button class="btn primary" type="button" data-theme-btn="hemi">Black + HEMI Orange</button>
+              <button class="btn" type="button" data-theme-btn="light">Light Mode</button>
+              <button class="btn" type="button" data-theme-btn="high-contrast">High Contrast</button>
+            </div>
+
+            <small style="margin-top:12px;">
+              Resume bullet: Built dynamic theming with CSS variables and runtime switching.
+            </small>
           </div>
 
-          <div class="liveops-box">
-            <div class="liveops-label">Calendar</div>
-            <div id="mini-cal-title" class="liveops-sub">Loading…</div>
-            <div id="mini-cal" class="mini-cal">Loading…</div>
+          <!-- Accessibility Panel -->
+          <div class="panel">
+            <div class="panel-title">Accessibility Panel</div>
+            <div class="panel-sub">Small controls aligned with accessibility best practices.</div>
+
+            <div class="control-row">
+              <label class="control-label" for="fontScale">Font size</label>
+              <input id="fontScale" class="control-range" type="range" min="90" max="130" step="5" value="100" />
+              <span id="fontScaleValue" class="control-value">100%</span>
+            </div>
+
+            <div class="control-row">
+              <label class="control-label" for="reduceMotion">Reduced motion</label>
+              <label class="switch">
+                <input id="reduceMotion" type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="control-row">
+              <label class="control-label" for="contrastToggle">Extra contrast</label>
+              <label class="switch">
+                <input id="contrastToggle" type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <small style="margin-top:12px;">
+              Resume bullet: Added accessibility controls aligned with WCAG principles.
+            </small>
           </div>
+
         </div>
-
-        <small>
-          This is client-side only. No tracking, no backend.
-        </small>
       </div>
 
       <div class="card">
@@ -125,7 +159,6 @@
 
   </div>
 
-  <!-- load JS -->
-  <script src="./script.js?v=4"></script>
+  <script src="./script.js?v=5"></script>
 </body>
 </html>
