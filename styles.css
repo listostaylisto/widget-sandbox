@@ -229,3 +229,84 @@ html, body {
     flex-direction: column;
   }
 }
+/* Live Ops */
+.liveops {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.liveops-box {
+  grid-column: span 12;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.liveops-box::before {
+  content: "";
+  position: absolute;
+  inset: -40px -40px auto auto;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(255,106,0,0.22), transparent 65%);
+  pointer-events: none;
+}
+
+.liveops-label {
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-size: 12px;
+}
+
+.liveops-value {
+  margin-top: 6px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.liveops-sub {
+  margin-top: 4px;
+  color: rgba(255,255,255,0.65);
+  font-size: 13px;
+}
+
+.mini-cal-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.mini-cal-head {
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.mini-cal-cell {
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.25);
+  font-size: 13px;
+}
+
+.mini-cal-empty {
+  border: 1px solid rgba(255,255,255,0.06);
+  background: transparent;
+}
+
+.mini-cal-today {
+  border-color: rgba(255,106,0,0.55);
+  box-shadow: 0 0 16px rgba(255,106,0,0.25);
+}
